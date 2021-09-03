@@ -1,0 +1,22 @@
+{
+  "name": "duel-masters-tabletop",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osama-h-rana/duel-masters-tabletop.git"
+  },
+  "author": "Osama Rana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osama-h-rana/duel-masters-tabletop/issues"
+  },
+  "homepage": "https://github.com/osama-h-rana/duel-masters-tabletop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
