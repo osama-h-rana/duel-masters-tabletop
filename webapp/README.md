@@ -1,6 +1,6 @@
 # duel-masters
 
-> A Vue.js project
+> [Download cards](https://drive.google.com/file/d/1u9hk-wdjMVIb7GdoM2vWBcCtQ9m_UGnm/view?usp=sharing)
 
 ## Build Setup
 
