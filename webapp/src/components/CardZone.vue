@@ -1,6 +1,17 @@
 <template>
   <div class="card-zone">
-    <card v-for="card in cards" :key="card" :card="card"></card>
+    <card
+      v-for="(card, index) in cards"
+      :key="index"
+      :card="card"
+      :flipped="flipped"
+      :untappable="untappable"
+      @mouseover.native="flipped ? null : $emit('card-hovered', card)"
+      draggable
+      @dragstart.native="$emit('drag-card', $event, card, index)"
+    >
+    </card>
+    <card v-if="cards.length == 0" card="cardback" class="no-show"></card>
   </div>
 </template>
 
@@ -9,7 +20,7 @@ import Card from './Card.vue'
 export default {
   components: { Card },
   name: 'CardZone',
-  props: ['cards'],
+  props: ['cards', 'flipped', 'untappable'],
   data () {
     return {
     }
@@ -22,6 +33,9 @@ div.card-zone {
   display: flex;
   width: 100%;
   justify-content: center;
+  min-height: 20px;
+  background: #333;
+  border: solid 1px black;
 }
 
 div.player-area.top .card-zone {
